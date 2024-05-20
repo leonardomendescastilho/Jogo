@@ -1,0 +1,157 @@
+:root{
+  font-size: 62.5%;
+
+  --fs-2: 1.6rem;
+  --fs-3: 2.4rem;
+
+  --fw-1: 400;
+  --fw-2: 500;
+  --fw-3: 700;
+
+  --lh-1: 2rem;
+  --lh-2: 3rem;
+
+  --clr-1: #fff;
+  --clr-2:  #bebaba;
+  --clr-3: #34355B;
+  --clr-accent: #4d4f85;
+}
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 1.6rem;
+  background: linear-gradient(288deg, #fff 0%, #bebaba 100%);
+}
+
+button{
+  all: unset;
+  cursor: pointer;
+}
+
+body, input, button{
+  font-family: 'roboto';
+}
+.container{
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.card{
+  padding: 4.8rem 6.4rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 .2rem .4rem rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin-block-end: 4.8rem;
+}
+.card-wrapper h1{
+  font-style: var(--fs-3);
+  font-weight: var(--fw-2);
+  line-height: var(--lh-2);
+  letter-spacing: 0.2px
+}
+
+.card-wrapper h2{
+  font-size: var(--fs-2);
+  line-height: var(--lh-1);
+  font-weight: var(--fw-1);
+  margin-block-end: 4.2rem;
+}
+
+
+/* form */
+form{
+  display: flex;
+}
+form input{
+  width: 50px;
+  padding: 1.6rem;
+  background-color: var(--clr-2);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  text-align: center;
+}
+form input:focus,
+form button:focus{
+  outline: none;
+}
+form input,
+form button{
+  border: none;
+}
+form button{
+  padding: 1.6rem;
+  color: var(--clr-1);
+  background-color: var(--clr-3);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  transition: all 0.3s;
+}
+
+form button:hover,
+form button:focus{
+  background-color: var(--clr-accent);
+}
+
+/*  */
+
+
+.card-answer-wrapper{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.3rem;
+}
+.card-answer-wrapper h1{
+  font-size: var(--fs-3);
+  font-weight: var(--fw-1);
+  line-height: var(--lh-2);
+  color: var(--clr-3)
+}
+
+.card-answer-wrapper button{
+  padding: 1.6rem;
+  background-color: var(--clr-3);
+  color: var(--clr-1);
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+.card-answer-wrapper button:hover,
+.card-answer-wrapper button:focus{
+  background-color: var(--clr-accent);
+  transform: scale(1.1);
+}
+
+/* hidden stuff */
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.open{
+  visibility: visible;
+  opacity: 1;
+}
